@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+.circle {
+    width: 27px; 
+    height: 27px; 
+    background-color: #EFAEA1;
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color   : #B0321A;
+    font-size: 12px; 
+    text-align: center; 
+  }
+
+  .square {
+    width: 130px; 
+    height: 50px; 
+    background: #D63415;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    color: white; 
+    font-size: 16px; 
+    text-align: center; 
+  }
+  
+    
+  .color_texto{
+   color: #8B92A2 !important;
+
+  }
+
+
+  
+/* ****************** */
+  /* PERFIL  */
+
+  .profile-container {
+   width: 176px;
+    height: 176px
+  }
+  @media (max-width: 768px) {
+   
+
+    .profile-container  {
+      width: 150px; 
+      height: 150px; 
+    }
+  }
+
+  @media (max-width: 576px) {
+    .profile-container {
+        width: 120px; 
+        height: 120px; 
+    }
+
+  
+  }
