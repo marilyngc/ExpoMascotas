@@ -1,6 +1,7 @@
 import { images } from "../../data/MOCK_DATA"
 import { Breadcrumb } from "../common/Breadcrumb"
 import { Calificacion } from "../common/Calificacion"
+import { CardFotografo } from "../common/CardFotografo"
 import { Fotografo } from "../common/Fotografo"
 import { Gallery } from "../common/Gallery"
 import { NavBar } from "../common/Navbar"
@@ -15,8 +16,10 @@ export const Home  = () => {
             <Breadcrumb/>
             <Fotografo/>
             <Calificacion/>
+          
             <Gallery imagenes={images}/>
-            <Seleccionar/>
+            <CardFotografo/>
+          
         
             
         </>
