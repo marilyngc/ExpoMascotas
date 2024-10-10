@@ -2,7 +2,7 @@
 import Form from 'react-bootstrap/Form';
 
 
-export const Seleccionar = ({grid, handleColumnsChange}) => {
+export const Seleccionar = ({seleccionadas,grid, handleColumnsChange}) => {
    // Calcula el progreso basado en el número de columnas seleccionadas
     const calculateProgress = (grid) => {
       switch (grid) {
@@ -14,7 +14,7 @@ export const Seleccionar = ({grid, handleColumnsChange}) => {
           return 35;
         case 4:
         default:
-          return 10;
+          return 0;
       }};
 
       const columnValues = [4, 3, 2, 1]; // Valores de columnas
@@ -22,7 +22,9 @@ export const Seleccionar = ({grid, handleColumnsChange}) => {
   return (
     <section className="container  rounded bg-white d-flex justify-content-between align-items-center mt-5 mb-4 py-2 px-4">
       <div style={{ width: "100px" }}>
-        Seleccionar
+        Seleccionados
+        
+        <span className='ms-2 text-secondary fw-medium'>{seleccionadas}</span>
       </div>
       <div className="d-flex  align-items-center justify-content-end  w-50">
         <div className="me-4">
@@ -30,9 +32,9 @@ export const Seleccionar = ({grid, handleColumnsChange}) => {
         </div>
         <div
           className=" position-relative  "
-          style={{ width: "100%", maxWidth: "400px" }}
+          style={{ width: "100%", maxWidth: "250px" }}
         >
-          <div className="progress " style={{ height: "15px"}}>
+          <div className="progress " style={{ height: "10px"}}>
             {/* Barra de progreso */}
             <div
               className="progress-bar "
@@ -53,16 +55,18 @@ export const Seleccionar = ({grid, handleColumnsChange}) => {
               onClick={() => handleColumnsChange(value)}
               value={value.toString()}
               checked={grid === value} 
-              style={{ left: `${10 + index * 25}%` }} 
+              style={{ left: `${0 + index * 32}%` }} 
             />
           ))}
        
        
           
-          
+      
           </div>
         </div>
+      
       </div>
+    
     </section>
   );
 };
